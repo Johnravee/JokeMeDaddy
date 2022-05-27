@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url('bg.jpg');
+    background-size:cover ;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+flex-wrap: nowrap;
+    text-align: center;
+    opacity: 1;
+    
+   
+}
+
+h3{
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.display .main-container{
+    border: 1px solid gainsboro;
+    padding: 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.display .main-container #joke{
+    text-align: center;
+    padding: 50px;
+  border: 1px solid gainsboro;
+  padding: 20px;
+    font-size: 25px;
+  
+
+}
+
+.display .main-container > #joke_btn{
+    font-size: 20px;
+ margin-top: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #F0B36A;
+    border-radius: 5px;
+}
+
+.display .main-container > #joke_btn:hover{
+    background-color:#F0C993;
+}
+
+.display .main-container > #joke_btn:active{
+    transform: scale(1.1);
+    transition: 0.5s;
+    
+}
+
+.display .main-container > img {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}

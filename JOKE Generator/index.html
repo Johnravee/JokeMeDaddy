@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ffaaf925d7.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg">
+    <title>Pang matalinong Joke</title>
+</head>
+<body>
+
+            <div class="display">
+
+                <div class="main-container">
+                  <img src="logo.jpg" alt="">
+
+                 <h3>If you laugh,You lose!</h3>
+
+                <div id="joke">Here come the joke!</div>
+
+
+                <button id="joke_btn">Generate Joke</button>
+                </div>
+
+            </div>
+    
+</body>
+
+<script>
+
+const jokediv = document.querySelector('#joke')
+const josres = document.querySelector('#joke_btn')
+
+// function
+
+        josres.addEventListener('click',generate);
+
+        async function generate(){
+            const jokeresult = await fetch('https://icanhazdadjoke.com/',
+            {
+                headers:{
+                    accept:'application/json'
+                }
+            })
+
+            const joke = await jokeresult.json()
+
+            jokediv.innerHTML = joke.joke
+        }
+</script>
+</html>
